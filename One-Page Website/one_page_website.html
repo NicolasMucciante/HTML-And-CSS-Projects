@@ -4,6 +4,7 @@
 	<title>SEAHAWKS</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./JS/one_page_website.js"></script>
 	</head>
 	<body>
 	
@@ -35,77 +36,99 @@
 				<h1>Gallery</h1>
 				<div>
 					
-					<!--PHOTO CONTAINER 1-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_1.jpg" alt="Russell Willson, Seahawks QB">
-							<div>
-								<p>Russell Wilson, Seattle Seahawks quarterback, #3!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 1-->
-					
-					<!--PHOTO CONTAINER 2-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_2.jpg" alt="Jamal Adams Seahawks Saftey">
-							<div>
-								<p>Jamal Adams, Seattle Seahawks saftey, #33!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 2-->
-					
-					<!--PHOTO CONTAINER 3-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_3.jpg" alt="DK Metcalf Seahawks WR">
-							<div>
-								<p>DK Metcalf, Seattle Seahawks reciever, #14!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 3-->
-					
-					<!--PHOTO CONTAINER 4-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_4.jpg" alt="Shaq Griffin Seahawks LB">
-							<div>
-								<p>Shaquem Griffin, Seattle Seahawks LB, first NFL player with only 1 hand, #49!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 4-->
-					
-					<!--PHOTO CONTAINER 5-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_5.jpg" alt="Seahawks first super bowl win">
-							<div>
-								<p>Russell Wilson's first Super Bowl win!!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 5-->
-					
-					<!--PHOTO CONTAINER 6-->
-					<div>
-						<div>
-							<img src="./images/thumbnails/thumb_6.jpg" alt="Bobby Wagner Seahawks LB">
-							<div>
-								<p>Bobby Wagner, Seattle Seahawks LB, #54!</p>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 6-->
-					
-				</div>
-			</div>
+					<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="./images/thumbnails/thumb_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./images/thumbnails/thumb_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./images/thumbnails/thumb_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./images/thumbnails/thumb_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+	</div>
+	<div class="column">
+		<img src="./images/thumbnails/thumb_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+	  </div>
+	  <div class="column">
+		<img src="./images/thumbnails/thumb_6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+	  </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 6</div>
+		<img src="./images/thumbnails/thumb_1.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 6</div>
+		<img src="./images/thumbnails/thumb_2.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 6</div>
+		<img src="./images/thumbnails/thumb_3.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 6</div>
+		<img src="./images/thumbnails/thumb_4.jpg" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+		<div class="numbertext">5 / 6</div>
+		<img src="./images/thumbnails/thumb_5.jpg" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+		<div class="numbertext">6 / 6</div>
+		<img src="./images/thumbnails/thumb_6.jpg" style="width:100%">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  	<div class="caption-container">
+			<p id="caption"></p>
 		</div>
-		</section>
-		<!--END PHOTOS-->
+  
+	  <!-- Thumbnail image controls -->
+	  	<div class="column">
+			<img class="demo" src="./images/thumbnails/thumb_1.jpg" onclick="currentSlide(1)" alt="Russell Willson, Seahawks QB">
+	  	</div>
+  
+	  	<div class="column">
+			<img class="demo" src="./images/thumbnails/thumb_2.jpg" onclick="currentSlide(2)" alt="Jamal Adams Seahawks Saftey">
+	 	 </div>
+  
+	  	<div class="column">
+			<img class="demo" src="./images/thumbnails/thumb_3.jpg" onclick="currentSlide(3)" alt="DK Metcalf Seahawks WR">
+	  	</div>
+  
+	  	<div class="column">
+			<img class="demo" src="./images/thumbnails/thumb_4.jpg" onclick="currentSlide(4)" alt="Shaq Griffin Seahawks LB">
+
+		<div class="column2">
+			<img class="demo" src="./images/thumbnails/thumb_5.jpg" onclick="currentSlide(5)" alt="Seahawks first super bowl win">
+		</div>
+
+		<div class="column2">
+			<img class="demo" src="./images/thumbnails/thumb_6.jpg" onclick="currentSlide(6)" alt="Bobby Wagner Seahawks LB">
+		</div>
+	  </div>
+	</div>
+  </div>
+				
 		
 		<!--HYPE VIDEO -->
 		<section>
